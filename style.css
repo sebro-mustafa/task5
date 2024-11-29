@@ -13,6 +13,60 @@ img {max-width:100% ;
 height: auto;
 object-fit: cover;}
 
+/* start header */
+.header{
+    /* background-image: linear-gradient(rgba(0,0,0,0.3) , rgba(0,0,0,0.3)) , url(img/hero-bg.jpg); */
+    background-color: teal;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-block: 8vh;
+    width:100% ;
+}
+.header-1 , .header-2{
+    width: 90%;
+    margin: auto;
+}
+.header-main{
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    width: 378px;
+    height: 48px;
+}
+.social{
+    display: flex;
+    width: 150px;
+    font-size: 35px;
+    justify-content: space-between;
+    gap: 10px;
+}
+.social a{
+    color: white;
+}
+.search{
+    font-family: 'metropolis-regular' , sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+nav ul{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 20vh;
+    justify-content: space-between;
+
+
+}
+
+/* end header */
 /* start extra */
 .extra{
     width:100% ;
@@ -139,6 +193,7 @@ object-fit: cover;}
     color: #656565;
 
 }
+/* end extra */
 
 /* start footer */
 footer{
@@ -173,9 +228,9 @@ footer{
 }
 .links h4 , .new-text h4{
     font-family: 'metropolis-bold', Arial, sans-serif;
-    font-size: 14px;
-    line-height: 18.004px;
-    letter-spacing: 2.5px;
+    font-size: 19px;
+    line-height: 18px;
+    letter-spacing: 3.5px;
     font-weight: 400;
     text-transform: uppercase;
     color: white;
@@ -187,7 +242,7 @@ footer{
 }
 .links a , .new-text p{
     font-family: 'metropolis-regular';
-    font-size: 15px;
+    font-size: 19px;
     line-height: 30px;
     font-weight: 400;
     text-align: left;
@@ -227,6 +282,11 @@ input{
 .b button{
     padding-inline: 15px;
     background-color: #0054A5;
+    
+    border-radius: 3px;
+    border: none;
+}
+.b a{
     color: white;
     font-family: 'metropolis-bold' , sans-serif;
     font-size: 12px;
@@ -234,17 +294,16 @@ input{
     letter-spacing: 3px;
     font-weight: 400;
     text-transform: uppercase;
-    border-radius: 3px;
-    border: none;
-
 }
+ .footer-2 a:hover{
+    color: black;}
   .footer-2{
     padding-left:5vh ;
     margin-top: 20vh;
   }
   .footer-2 span{
     font-family: 'metropolis-regular' , sans-serif;
-    font-size: 15px;
+    font-size: 19px;
     line-height: 30px;
     font-weight: 400;
     color: #757576;
@@ -256,16 +315,27 @@ input{
   }
   .footer-2 a{
     font-family: 'metropolis-regular' , sans-serif;
-    font-size: 15px;
+    font-size: 19px;
     line-height: 30px;
     font-weight: 400;
     color: white;
   }
+
+
 @font-face {
     font-family: 'metropolis-regular';
     src: url('Metropolis-r11/Fonts/Webfonts/WOFF2/Metropolis-Regular.woff2') , format('.woff2') 
     url('Metropolis-r11/Fonts/Webfonts/WOFF/Metropolis-Regular.woff') , format('.woff') 
     url('Metropolis-r11/Fonts/TrueType/Metropolis-Regular.ttf') , format('.truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'metropolis-medium';
+    src: url('Metropolis-r11/Fonts/Webfonts/WOFF2/Metropolis-Medium.woff2') , format('.woff2') 
+    url('Metropolis-r11/Fonts/Webfonts/WOFF/Metropolis-Medium.woff') , format('.woff') 
+    url('Metropolis-r11/Fonts/TrueType/Metropolis-Medium.ttf') , format('.truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -288,24 +358,50 @@ input{
     font-style: normal;
 }
 
-/* @media only screen and (max-width:600px) {
-    .footer-1 , .input .footer{
-        width: 100%;
+@media screen and (max-width: 1200px) {
+    .extra, .back-footer {
+        padding-block: 15vh;
     }
-    
-}
-
-@media only screen and (min-width:600px) {
-    .footer-1 , .input .footer{
-        width: 50%;
+    .ex {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 0;
     }
-    .footer-1{
+    .tags {
+        width: 80%;
+    }
+    .footer-1 {
         flex-direction: column;
     }
-    .input{
-        flex-direction: row;
+    .link {
+        width: 100%;
+        justify-content: flex-start;
     }
-    
-} */
+    .new {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ex {
+        padding-bottom: 0;
+    }
+    .tags {
+        width: 100%;
+    }
+    .footer-1 {
+        width: 100%;
+    }
+    .footer-2 {
+        margin-top: 15vh;
+        padding-left: 0;
+        text-align: center;
+    }
+    .footer-2 a {
+        display: inline-block;
+        margin-top: 10px;
+    }
+}
 
 /* end footer */
